@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Tomiwa';
+  age = '100';
+  ageInput;
+  me = 'Tomiwa';
+  randomPoints = 0;
+
+
+  getRandomPoints() {
+
+    this.randomPoints = Math.floor(Math.random() * 10 + 1);
+  }
+
+  eatFood(foodName) {
+
+  }
+
 }
+
