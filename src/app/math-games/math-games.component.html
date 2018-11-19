@@ -8,42 +8,64 @@
         Game 1: Fractions
       </h2>
 
-      I've given you 1/3 of my marbles.
-      <img src="../../assets/atharv.jpg">
-
-      Thanks for giving me 6 marbles
-      <img src="../../assets/jami.jpg">
-
-      Can I have half of the rest
-      <img src="../../assets/tomiwa.jpg">
-
-      Atharv had <input> marbles.
-
-      Tomiwa has <input> marbles.
-
+      <!-- TODO: Which is the proper way of referencing image assets.-->
       <div>
-          <button (click)="checkAnswer=!checkAnswer">
-              {{checkAnswer ? 'Hide Check' : 'Check Answer'}}
-          </button>
-
-        <button (click)="showAnswer=!showAnswer">
-          {{showAnswer ? 'Hide Answer' : 'Show Answer'}}
-        </button>
+        <img class="user-image" src="assets/images/atharv.jpg">
+          I've given you 1/3 of my marbles.
       </div>
 
-      <div *ngIf="showAnswer" class="larger-text">
+      <div>
+        <img class="user-image" src="../../assets/images/jami.jpg">
+          Thanks for giving me 6 marbles
+      </div>
+
+      <div>
         <p>
-          {{variableX}}
+          <img class="icon-image" src="assets/images/atharv.jpg">
+          Atharv originally had <input [(ngModel)]="userAnswerFractions"> marbles.
         </p>
       </div>
 
-      <div *ngIf="checkAnswer">
-          <p *ngIf="userAnswer==variableX">
+
+      <div>
+          <button (click)="checkAnswerFractions=!checkAnswerFractions">
+              {{checkAnswerFractions ? 'Hide Check' : 'Check Answer'}}
+          </button>
+
+        <button (click)="showAnswerFractions=!showAnswerFractions">
+          {{showAnswerFractions ? 'Hide Answer' : 'Show Answer'}}
+        </button>
+      </div>
+
+      <div *ngIf="showAnswerFractions" class="larger-text">
+        <p>
+          {{fractionsAnswer}}
+        </p>
+      </div>
+
+      <div *ngIf="checkAnswerFractions">
+          <p *ngIf="userAnswerFractions==fractionsAnswer">
               You are Correct 🔥 💯 😃
             </p>
-            <p *ngIf="userAnswer!=variableX">
+            <p *ngIf="userAnswerFractions!=fractionsAnswer">
                 Sorry Try Again 😭 💩
             </p>
+      </div>
+
+      <button (click)="showLevel2Fractions=!showLevel2Fractions">
+        {{showLevel2Fractions ? 'Hide Level 2' : 'Show Level 2'}}
+      </button>
+
+      <div *ngIf="showLevel2Fractions">
+        <div>
+          <img class="user-image" src="../../assets/images/tomiwa.jpg">
+          Can I have half of the rest
+        </div>
+
+        <p>
+          <img class="icon-image" src="../../assets/images/tomiwa.jpg">
+          Tomiwa now has <input> marbles.
+        </p>
       </div>
 
     </div>

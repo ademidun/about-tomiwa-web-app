@@ -7,16 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MathGamesComponent implements OnInit {
 
+  showAnswerFractions = false;
+  checkAnswerFractions = false;
+  userAnswerFractions = null;
+
+  fractionsAnswer = 18;
+
   variableK = 28;
   variableX = 5;
-  
+
   result1 = 12 + this.variableK;
   result2 = 12 + this.variableK - this.variableX;
 
   showAnswer = false;
   checkAnswer = false;
+  userAnswer = null;
 
-  userAnswer= null;
+  showLevel2Fractions = false;
+
   constructor() { }
 
   ngOnInit() {
