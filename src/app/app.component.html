@@ -11,7 +11,10 @@
 <h2>Here are some cool facts about {{me}}: </h2>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">I am a fan of Russell Westbrook</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">
+      I am a fan of Russell Westbrook</a>
+    </h2>
+    <h3>Russell Westbrook is {{playerAge}} years old.</h3>
 
     <div>
       <video>
@@ -23,14 +26,22 @@
 
     <div>
       <p>How old are you?</p>
-      <input title="How old are you?" value="{{ageInput}}"/>
-      <input title="How old are you?" [value]="ageInput"/>
+      <!-- <input title="How old are you?" [value]="ageInput"/> -->
+      <input title="How old are you?" [(ngModel)]="ageInput" type="number"/>
+      <p>{{ageInput}}</p>
+
+      <button (click)="getAgeDifference()">
+        Get Age Difference
+      </button>
+
+      <h3 *ngIf="ageDifference">There are {{ageDifference}} years between you and Russell Westbrook</h3>
     </div>
 
 
     <h3>How many points will Russell Westbrook Score?</h3>
     <div>{{randomPoints}}</div>
     <button (click)="getRandomPoints()">Guess!</button>
+
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">Is pretty fast</a></h2>

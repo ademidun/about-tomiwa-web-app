@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tomiwa';
   age = '100';
-  ageInput;
+  ageInput= null;
   me = 'Tomiwa';
   randomPoints = 0;
+  playerAge = 30;
+  ageDifference = null;
 
 
   getRandomPoints() {
@@ -18,8 +20,8 @@ export class AppComponent {
     this.randomPoints = Math.floor(Math.random() * 10 + 1);
   }
 
-  eatFood(foodName) {
-
+  getAgeDifference() {
+    this.ageDifference = this.playerAge - this.ageInput;
   }
 
 }
