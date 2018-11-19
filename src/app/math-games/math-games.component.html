@@ -1,3 +1,45 @@
-<p>
-  math-games works!
-</p>
+<div>
+    <h1>
+      Let's play math  
+    </h1>
+
+    <div class="larger-text">
+      <p>
+        12 + {{variableK}} = {{result1}}
+      </p>
+      <p>
+        12 + {{variableK}} - <strong>x</strong> = {{result2}}
+      </p>
+      
+      <h3>
+        What is X?
+      </h3>
+      <input [(ngModel)]="userAnswer" type="number"> 
+
+    </div>
+
+    <div>
+        <button (click)="checkAnswer=!checkAnswer">
+            {{checkAnswer ? 'Hide Check' : 'Check Answer'}}
+        </button>
+
+      <button (click)="showAnswer=!showAnswer">
+        {{showAnswer ? 'Hide Answer' : 'Show Answer'}}
+      </button>
+    </div>
+
+    <div *ngIf="showAnswer" class="larger-text">
+      <p>
+        {{variableX}}
+      </p>
+    </div>
+
+    <div *ngIf="checkAnswer">
+        <p *ngIf="userAnswer==variableX">
+            You are Correct 🔥 💯 😃
+          </p>
+          <p *ngIf="userAnswer!=variableX">
+              Sorry Try Again 😭 💩
+          </p>
+    </div>
+</div>
