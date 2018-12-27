@@ -10,8 +10,12 @@ export class MathGamesComponent implements OnInit {
   showAnswerFractions = false;
   checkAnswerFractions = false;
   userAnswerFractions = null;
-
   fractionsAnswer = 18;
+
+  showAnswerFractions2 = false;
+  checkAnswerFractions2 = false;
+  userAnswerFractions2 = null;
+  fractionsAnswer2 = 6;
 
   variableK = 28;
   variableX = 5;

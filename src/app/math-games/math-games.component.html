@@ -64,8 +64,34 @@
 
         <p>
           <img class="icon-image" src="../../assets/images/tomiwa.jpg">
-          Tomiwa now has <input> marbles.
+          Tomiwa now has <input [(ngModel)]="userAnswerFractions2"> marbles.
         </p>
+
+        <div>
+          <button (click)="checkAnswerFractions2=!checkAnswerFractions2">
+            {{checkAnswerFractions2 ? 'Hide Check' : 'Check Answer'}}
+          </button>
+
+          <button (click)="showAnswerFractions2=!showAnswerFractions2">
+            {{showAnswerFractions2 ? 'Hide Answer' : 'Show Answer'}}
+          </button>
+        </div>
+
+        <div *ngIf="showAnswerFractions2" class="larger-text">
+          <p>
+            {{fractionsAnswer2}}
+          </p>
+        </div>
+
+        <div *ngIf="checkAnswerFractions2">
+          <p *ngIf="userAnswerFractions2==fractionsAnswer2">
+            You are Correct 🔥 💯 😃
+          </p>
+          <p *ngIf="userAnswerFractions2!=fractionsAnswer2">
+            Sorry Try Again 😭 💩
+          </p>
+        </div>
+
       </div>
 
     </div>
