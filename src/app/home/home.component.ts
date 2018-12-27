@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
 
   title = 'Tomiwa';
-  age = '100';
+  age = '22';
   ageInput= null;
   me = 'Tomiwa';
   randomPoints = 0;
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   getRandomPoints() {
 
-    this.randomPoints = Math.floor(Math.random() * 10 + 1);
+    this.randomPoints = Math.floor(Math.random() * 85 + 1);
   }
 
   getAgeDifference() {
