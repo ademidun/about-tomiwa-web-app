@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+This project was built to teach people how to make websites using Angular.
+
+The full demo can be found here.
+
+The article What I Learned from Teaching Two Kids how to Code can be found here.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
