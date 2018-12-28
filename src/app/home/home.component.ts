@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,19 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   title = 'Tomiwa';
-  age = '22';
-  ageInput= null;
+  ageInput = null;
   me = 'Tomiwa';
   randomPoints = 0;
   playerAge = 30;
   ageDifference = null;
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
 
 
   getRandomPoints() {
